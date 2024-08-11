@@ -170,7 +170,7 @@ where
         };
 
         self.segments.push(segment_c);
-        self.buffer.truncate(segment_c.offset + segment_c.length).shrink_to_fit();
+        self.buffer.truncate(segment_c.offset + segment_c.length);
     }
 
     pub fn peek(&mut self) -> Option<Box<[ParetoValue<T, U>]>> {
